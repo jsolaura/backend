@@ -1,0 +1,161 @@
+
+.postWrap {
+    width: 100vw !important;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+}
+
+.postHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.postList {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.postList li {
+    width: calc(100% / 4);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.postList li img {
+    margin-bottom: 1rem;
+}
+
+.pageNumber {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.pageNumber li {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #eee;
+    transition: all .35s;
+    cursor: pointer;
+}
+.pageNumber li.active {
+    background: #fff;
+    color: #282c34;
+}
+
+.pageNumber li button {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.pageNumber li button:disabled svg {
+    color: #333;
+}
+
+.loadMore {
+    margin: 1rem 0 1rem 1.5rem;
+    max-width:130px;
+    max-height: 36px;
+    border: 1px solid #bbb;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.loadMore li {
+    padding: 0.5rem;
+}
+
+.loadMore.active {
+    overflow: auto;
+    max-height: none;
+}
+
+
+.loadMore.active li {
+    background: #eee;
+    color: #333;
+}
+
+.loadMore li:first-child {
+    background: #282c34;
+    color: #fff;
+}
+
+.postWrite {
+    margin-right: 1rem;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0.5rem;
+    border: 1px solid #fff;
+}
+
+.postForm {
+    width: 500px;
+    border: 1px solid #eee;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.postForm h5 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.postImgContainer {
+    margin-top: 1rem;
+    display: flex;
+}
+
+.postTitle, .imageFile {
+    width: 100%;
+    display: block;
+    margin: 1rem 0;
+}
+
+.postText {
+    width: 100%;
+    height: 200px;
+    margin-top: 1rem;
+}
+
+.postTitle::placeholder, .postText::placeholder {
+    transition: all 0.35s;
+}
+
+.postTitle:focus::placeholder, .postText:focus::placeholder {
+    opacity: 0;
+}
+
+.imgPreview {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #eee;
+}
+
+.imgPreview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.submitPost {
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}

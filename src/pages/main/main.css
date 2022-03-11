@@ -1,0 +1,10 @@
+.mainNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainNav li {
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+}

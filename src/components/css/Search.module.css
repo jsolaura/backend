@@ -1,0 +1,27 @@
+.searchWrap {
+    margin-bottom: 2rem;
+}
+.searchKeyword {
+    width: 300px;
+    color: #000;
+}
+.searchKeyword::placeholder {
+    transition: all 0.35s;
+}
+.searchKeyword:focus::placeholder{
+    opacity: 0;
+}
+.searchIcon {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+.searchBtn {
+    cursor: pointer;
+    margin-left: 0.5rem;
+    border: 1px solid #eee;
+    transition: all 0.35s;
+}
+.searchBtn:hover {
+    background: #eee;
+    color: #000;
+}

@@ -1,26 +1,87 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url("./fonts/Poppins-Regular.ttf") format("truetype");
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url("./fonts/NotoSansKR-Regular.otf") format("truetype");
+  unicode-range: U+AC00-D7A3;
+}
+:root {
+  --background: #1e202d;
+  --key-color: #7e87da;
+  --sky-blue: #63d3e2;
+  --dark-purple: #262149 !important;
+  --light-purple: #3f377c;
+  --white-purple: #433982;
+  --bs-active-primary : #433982;
+  --fade-purple: rgba(163, 178, 255, 0.45);
+  --normal-blue: #042595;
+  --white-blue: #5c70d9;
+  --light-pink: #f6f4ff;
+  --gold: #FFAA4C;
+  --brown: #f6994b;
+  --normal-salmon: #fc725d;
+  --light-salmon: #f2a594;
+  --red: #ec2e37;
+  --dark-red: #d22a32;
+  --gray-4: #404040;
+  --gray-3: #8c8c8c;
+  --gray-2: #bfbfbf;
+  --gray-1: #f2f2f2;
+  --pink-gray: #fffafa;
+  --warm-gray: #d1d3c6;
+  --bs-active-secondary-: #d1d3c6;
+  --border: #eaeaea;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*font-size: 1rem;*/
+  font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+input, button, textarea {
+  outline: none;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 0.35rem;
+}
+
+button {
+  background: none;
+}
+
+h1, h2, h3 {
+  font-size: 2rem;
+  color: #fff !important;
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App {
+  background-color: var(--background);
   color: white;
 }
 
@@ -35,4 +96,36 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.wrapper {
+  min-height: 75vh;
+}
+
+.h2title {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.dNone {
+  display: none;
+}
+
+.modalTestBtn {
+  border: 1px solid #f1f1f1;
+  border-radius: 0.75rem;
+}
+
+.footerWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  padding: 2rem;
+}
+
+.footerWrap p {
+  font-size: 0.8rem;
+  margin-bottom: 0 !important;
 }

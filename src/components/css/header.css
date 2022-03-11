@@ -1,0 +1,70 @@
+.header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.searchInput {
+    width: 0;
+    opacity: 0;
+    height: 30px;
+    color: #333333;
+    font-size: 0.9rem;
+    transition: all 0.35s;
+    margin-right: 1rem;
+    padding: 0.5rem;
+}
+
+.searchInput.active {
+    width: 100%;
+    opacity: 1;
+}
+
+.searchIcon {
+    transition: all 0.35s;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+}
+
+.searchIcon.inactive {
+    /*opacity: 0;*/
+}
+
+.gnb {
+    display: flex;
+    flex-direction: column;
+}
+
+.gnb li {
+    text-align: right;
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+}
+
+.gnb li:last-child {
+    margin-right: 0 !important;
+}
+
+.mainLogo {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ham svg {
+    font-size: 1.5rem;
+}
+
+.mainModal {
+    color: #000;
+}

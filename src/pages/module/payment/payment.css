@@ -1,0 +1,23 @@
+.paymentWrap,
+.certificationWrap {
+    position: relative;
+}
+
+.historyContainer {
+    position: absolute;
+    top: 0.7rem;
+    left: 33%;
+    /*left: 10rem;*/
+}
+
+.historyContainer button {
+    padding: 0.2rem 0.5rem !important;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 0.35rem;
+    color: #fff;
+}
+
+.historyContainer button:first-child {
+    margin-right: 0.5rem;
+}
