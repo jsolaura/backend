@@ -1,0 +1,75 @@
+.pickCastAudioContainer {
+
+}
+
+.audioWrap {
+    display: flex;
+}
+
+.audioList {
+
+}
+
+.audioItem {
+
+}
+.audioItemImg {
+
+}
+.audioItemInfo {
+
+}
+.audioDetail {
+
+}
+.detailImageWrap {
+
+}
+.audioControl {
+
+}
+.audioBtnControl {
+
+}
+
+.audioLs{
+    /*max-height: 500px;*/
+    width: 100vw;
+    background: #000;
+}
+
+.audioLsHeader {
+
+ }
+
+.audioLsContainer {
+    width: 700px;
+    padding: 1.25rem;
+    margin: 0 auto;
+    /*overflow-y: scroll;*/
+    /*background: #000;*/
+}
+
+
+.audioLsItem .audioImg{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: grey;
+    overflow: hidden;
+}
+.audioLsItem .audioImg{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+.audioInfo{
+    font-size: 12px;
+    color: #fff;
+}
+
+.noData {
+    text-align: center;
+    font-size: 1rem;
+}

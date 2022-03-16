@@ -1,7 +1,7 @@
 import './App.css';
-import Header from "components/Header";
+import Header from "components/layout/Header";
 import Router from "components/Router";
-import Footer from "components/Footer";
+import Footer from "components/layout/Footer";
 
 import {
     BrowserRouter

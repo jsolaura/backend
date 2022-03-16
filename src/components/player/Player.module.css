@@ -1,0 +1,315 @@
+
+.player {
+    display: block;
+    background-color: #313131;
+    display: block;
+    margin: 0px auto;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.8), inset 6px 6px 12px rgba(255, 255, 255, 0.4);
+}
+
+.player > h4 {
+    color: #FFF;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+}
+
+.player > p {
+    color: #AAA;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.player > p span {
+    font-weight: 400;
+}
+
+.playerDetails .detailsImg {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.playerDetails .detailsImg img {
+    display: block;
+    margin: 50px auto;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8), -6px -6px 12px rgba(255, 255, 255, 0.4);
+}
+
+.playerDetails .detailsImg:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    right: -25px;
+    bottom: -25px;
+    border-radius: 50%;
+    border: 3px dashed rgba(255, 206, 0, 1);
+}
+
+.playerDetails .detailsTitle {
+    color: #EEE;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -2px -2px 4px rgba(255,255,255,0.4);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.playerDetails .detailsArtist {
+    color: #AAA;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -2px -2px 4px rgba(255,255,255,0.4);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.playerControls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.playerControls .playBtn {
+    display: flex;
+    margin: 0 30px;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), -4px -4px 10px rgba(255, 255, 255, 0.4), inset -4px -4px 10px rgba(0, 0, 0, 0.4), inset 4px 4px 10px rgba(255, 255, 255, 0.4);
+    border: none;
+    outline: none;
+    background-color: #FFCE00;
+    color: #FFF;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.playerControls .skipBtn {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #888;
+    font-size: 18px;
+}
+
+.tabContainer{
+
+}
+
+.tabHeader > a{
+    flex: 1;
+    display: inline-block;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    border-bottom: 1px solid grey;
+}
+
+.tabHeader > a.active{
+    border-bottom: 1px solid #83c11f;
+}
+
+.tabContents .tabContent{
+    display: none;
+    margin-bottom: 100px;
+}
+
+/* .tabContents .tabContent:target{
+    display: block;
+} */
+
+.tabContents .tabContent.active{
+    display: block;
+}
+
+.tabContents .tabContent .contentItem{
+    width: 120px;
+    height: 120px;
+    background: grey;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.contentWrapper{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contentWrapper .contentItem img{
+    width: 120px;
+    height: 120px;
+}
+.contentLabel{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixFooter{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    background: grey;
+    background: url("https://github.com/Rizwan17/react-music-player/blob/ui-with-logic/src/assets/footer-bg-1.jpg?raw=true");
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    /* height: 50px; */
+    transition: height .2s ease-out;
+}
+
+.fixFooter._h60{
+    height: 60px;
+}
+
+.fixFooter._h115{
+    height: 115px;
+}
+
+.fixFooter._h83{
+    height: 83px;
+}
+
+.fixFooter._h138{
+    height: 138px;
+}
+
+.fixFooter.active{
+    height: calc(100% - 40px);
+}
+.slideUpBtn{
+    width: 50px;
+    height: 5px;
+    background: grey;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+
+
+.miniPlayer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.miniPlayer .artistCoverImg{
+    width: 40px;
+    height: 40px;
+    background: grey;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.miniPlayer .artistCoverImg img{
+    width: 40px;
+    height: 40px;
+}
+
+.miniPlayerControl {
+    display: flex;
+}
+
+.miniPlayerControl button{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.miniPlayer button img{
+    width: 15px;
+}
+
+.miniPlayer button:first-child{
+    margin-right: 20px;
+}
+
+.miniPlayerInfo{
+    font-size: 12px;
+}
+
+.miniPlayerInfo p:last-child{
+    color: grey;
+}
+
+.audioPlayerLg .audioCoverLgImg{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.audioPlayerLg .audioCoverLgImg img{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: grey;
+}
+
+.audioPlayerProgress{
+    width: 100%;
+    margin: 20px 0;
+}
+
+.audioPlayerProgress input[type=range]{
+    width: 100%;
+    -webkit-appearance: none;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(to right, #ffffff 50%, grey 50%);
+}
+
+.audioControls{
+    width: 180px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.audioControls button{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.audioControls > button:first-child{
+    transform: scaleX(-1);
+}
+
+.audioControls .playPauseBtn{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+.audioControls .playPauseBtn img{
+    width: 15px;
+}

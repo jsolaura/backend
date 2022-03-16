@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
-import './css/header.css';
+import '../css/header.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faSearch } from "@fortawesome/free-solid-svg-icons";
 
@@ -23,6 +23,7 @@ function Header() {
                     <li><NavLink to="/todo">TodoList</NavLink></li>
                     <li><NavLink to="/ticket">Ticket</NavLink></li>
                     <li><NavLink to="/module">Module</NavLink></li>
+                    <li><NavLink to="/audioPlayer">AudioPlayer</NavLink></li>
                 </ul>
                 <span onClick={onClick}>
                     <FontAwesomeIcon className={`searchIcon ${searchVisible ? "inactive" : ""}`} icon={faSearch} />

@@ -6,7 +6,8 @@ import Paging from "../../components/Paging";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronLeft, faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
-import SearchKeyword from "../../components/SearchKeyword";
+import SearchKeyword from "../../components/search/SearchKeyword";
+import TicketSkeleton from "../../components/skeleton/TicketSkeleton";
 
 const TicketOrder = () => {
     const [loading, setLoading] = useState(true);
@@ -19,41 +20,70 @@ const TicketOrder = () => {
     const offset = (page - 1) * limit;
 
     const getTicketOrder = async () => {
-        // const json = await (
-        //     await fetch("http://localhost:8080/api/ticket/order")
-        // ).json();
-        const response = await axios.get("http://localhost:8080/api/ticket/order");
-        setTicket(response.data);
-        setLoading(false);
-
+        setLoading(true);
+        new Promise(res => {
+            setTimeout(() => {
+                res();
+            }, 500);
+        }).then(() => {
+            axios.get("http://localhost:8080/api/ticket/order")
+                .then(res => {
+                    setTicket(res.data);
+                    setTimeout(() => setLoading(false), 100);
+                })
+        })
     }
+
+    useEffect(()=>{
+        getTicketOrder();
+        setPage(JSON.parse(window.localStorage.getItem('page')));
+    },[])
+
     useEffect(() => {
         getTicketOrder();
-    }, [])
+        window.localStorage.setItem('page', page);
+    }, [page]);
+
+
 
     const onChange = (e) => {
         setValue(e.target.value);
-        setFiltered(false);
+        setFiltered(true);
         if (value === "" || value == null) {
             setFiltered(false);
         }
     }
     const onClick = () => {
+        setLoading(true);
         setFiltered(true);
         setPage(1);
-        setTicket(ticket.filter(item => item.name.toLowerCase().includes(value)));
-        if (value === "") {
+        // setPage(JSON.parse(window.localStorage.getItem('page')));
+
+        setTimeout(() => {
+            setLoading(false)
+            setTicket(ticket.filter(item => item.name.toLowerCase().includes(value)));
+        }, 500);
+        setValue("");
+
+        if (value === "" || value == null) {
             setFiltered(false);
-            getTicketOrder();
             setTicket(ticket);
+            getTicketOrder();
         }
     }
 
     return (
         <>
-            {loading ? <Loader /> :
+            <SearchKeyword value={value} onChange={onChange} onClick={onClick} placeholder={"전시 이름을 입력해주세요 !"} />
+            {loading
+                ?
+                <div className={styles.skeletonWrap}>
+                    { new Array(10).fill(1).map((_, i) => {
+                        return <TicketSkeleton key={i}/>;
+                    })}
+                </div>
+                :
                 <>
-                <SearchKeyword value={value} onChange={onChange} onClick={onClick} placeholder={"전시 이름을 입력해주세요 !"} />
                 <div className={styles.ticketList}>
                     { filtered ?
                         ticket.filter(item => item.name.toLowerCase().includes(value)).slice(offset, offset + limit).map(filteredItem => (

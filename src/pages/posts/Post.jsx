@@ -1,8 +1,8 @@
 import React from "react";
 import './post.css';
 import PostsTemplate from "./PostsTemplate";
-import TicketOrder from "./TicketOrder";
-import styles from './Ticket.module.css';
+import TicketOrder from "../ticket/TicketOrder";
+import styles from '../ticket/Ticket.module.css';
 
 function Post () {
     return (

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import styles from './css/Search.module.css';
+import styles from '../css/Search.module.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSearch} from "@fortawesome/free-solid-svg-icons";
 

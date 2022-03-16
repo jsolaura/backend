@@ -26,7 +26,6 @@ const Paging = ({ total, limit, page, setPage }) => {
     });
     useEffect(() => {
         const lessThanFive = totalPage >= pagesPerList;
-        console.log(lessThanFive);
         lessThanFive
             ? setShowingNum(prev => ({ ...prev, start:  1, end: pagesPerList }))
             : setShowingNum(prev => ({ ...prev, start:  1, end: totalPage }))
@@ -54,7 +53,9 @@ const Paging = ({ total, limit, page, setPage }) => {
                     .map((_, i) => (
                         <button className={styles.paginationBtn}
                             key={i + 1}
-                            onClick={() => setPage(i + 1)}
+                            onClick={() => {
+                                setPage(i + 1)
+                            }}
                             aria-current={page === i + 1 ? "page" : null}
                         >
                             {i + 1}

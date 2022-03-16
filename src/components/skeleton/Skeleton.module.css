@@ -1,0 +1,75 @@
+@keyframes loading {
+    0% {
+        transform: translateX(0);
+    }
+    50%,
+    100% {
+        transform: translateX(460px);
+    }
+}
+.skeletonWrap {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    gap: 3rem 0;
+}
+.skeletonItem {
+    width: 45%;
+    display: flex;
+    padding: 0 2rem 2rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+}
+.skeletonContainer {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-left: 2rem;
+}
+.skeletonImg {
+    display: block;
+    width: 200px;
+    height: 270px;
+    overflow: hidden;
+    background: #f2f2f2;
+    border: 1px solid #bbb;
+    position: relative;
+    transform: translateY(-1rem) translateX(-1rem);
+}
+
+.skeletonImg:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background: linear-gradient(to right, #f2f2f2, #ddd, #f2f2f2);
+    animation: loading 2s infinite linear;
+}
+
+.skeletonBox {
+    width: 100%;
+    min-height: 30px;
+    background: #f2f2f2;
+    position: relative;
+    overflow: hidden;
+}
+h5.skeletonBox {
+    margin-bottom: 1rem;
+}
+.skeletonBox:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background: linear-gradient(to right, #f2f2f2, #ddd, #f2f2f2);
+    animation: loading 2s infinite linear;
+}
